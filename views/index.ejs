@@ -25,12 +25,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><a href="https://myaccount.google.com/">https://myaccount.google.com/</a></td>
-                <td><a href="https://google.com/">Google/</a></td>
-                <td>10</td>
-
-            </tr>
+            <% shorts.forEach(urls=>{
+                %>
+                <tr>
+                    <td><a href="<%= urls.full %>""><%= urls.full %></a></td>
+                    <td><a href="<%= urls.short %>""><%= urls.short %></a></td>
+                    <td>`<%= urls.clicks %>`</td>
+                </tr>
+                <%
+            })
+            %>
+           
         </tbody>
     </table>
     </div>
